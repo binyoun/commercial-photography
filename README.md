@@ -20,12 +20,17 @@ render from the `SESSIONS` data in `index.html`.
 
 Deliberately free of dates and week numbers so it can be reused across semesters.
 
+**Design:** a light contact-sheet theme. Warm paper ground, white frames, sprocket
+rails fixed down both edges, dark slate blocks for part dividers and prompts, and the
+signal red carried over from the class deck.
+
 ## Files
 
 | Path | Purpose |
 | --- | --- |
 | `index.html` | The whole site. Edit this. |
 | `embed_handouts.py` | Re-embeds `handouts/*.pdf` into `index.html` as data URIs |
+| `restyle.py` | Holds the Contact Sheet stylesheet; re-run to reapply the theme |
 | `handouts/dossier-worksheet.html` | Print source for the team worksheet |
 | `handouts/make_docx.py` | Builds the editable DOCX version |
 | `handouts/paste-into-google-doc.html` | Copy-paste source for a shared Google Doc |
