@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Embed the team worksheet files into index.html as data-URI downloads.
+"""Embed the team worksheet files into studio.html as data-URI downloads.
 
 Re-runnable: rewrites everything between the HANDOUTS markers, so regenerate
 the PDF/DOCX first, then run this again.
@@ -10,7 +10,7 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).parent
-PAGE = ROOT / "index.html"
+PAGE = ROOT / "studio.html"
 HANDOUTS = ROOT / "handouts"
 
 FILES = [
@@ -49,4 +49,4 @@ if new == html:
     raise SystemExit("markers not found or nothing changed")
 
 PAGE.write_text(new)
-print(f"embedded {len(FILES)} files; index.html is now {len(new)/1024:.0f} KB")
+print(f"embedded {len(FILES)} files; studio.html is now {len(new)/1024:.0f} KB")

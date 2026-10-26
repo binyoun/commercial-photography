@@ -8,7 +8,7 @@ Live: https://binyoun.github.io/commercial-photography/
 
 A single self-contained page with hash routing. Twelve sessions, each pairing a lecture
 with studio time. Two session companions are fully built; the rest are placeholders that
-render from the `SESSIONS` data in `index.html`.
+render from the `SESSIONS` data in `studio.html`.
 
 - **Landing** — semester map, weekly session anatomy, assessment thread (A1, A2, A3)
 - **S03 Product: From Brand to Image** — commercial pipeline, four-layer brand
@@ -28,8 +28,9 @@ signal red carried over from the class deck.
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | The whole site. Edit this. |
-| `embed_handouts.py` | Re-embeds `handouts/*.pdf` into `index.html` as data URIs |
+| `index.html` | Course hub: sessions, assessments, handouts, references. Redirects old `#/...` links to the studio. |
+| `studio.html` | The session companion site (hash-routed). Edit this for session content. |
+| `embed_handouts.py` | Re-embeds `handouts/*.pdf` into `studio.html` as data URIs |
 | `restyle.py` | Holds the Contact Sheet stylesheet; re-run to reapply the theme |
 | `handouts/dossier-worksheet.html` | Print source for the team worksheet |
 | `handouts/make_docx.py` | Builds the editable DOCX version |

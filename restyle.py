@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Swap index.html's stylesheet for the light Contact Sheet theme."""
+"""Swap studio.html's stylesheet for the light Contact Sheet theme."""
 
 import pathlib
 import re
@@ -312,7 +312,7 @@ CSS = """
   footer .wrap span:first-child{color:var(--ink);}
 """
 
-page = pathlib.Path(__file__).parent / "index.html"
+page = pathlib.Path(__file__).parent / "studio.html"
 html = page.read_text()
 
 new, n = re.subn(r"<style>.*?</style>", f"<style>{CSS}</style>", html, count=1, flags=re.S)
@@ -330,4 +330,4 @@ if n2 != 1:
     raise SystemExit("strip div not found")
 
 page.write_text(new)
-print(f"restyled; index.html is {len(new)/1024:.0f} KB")
+print(f"restyled; studio.html is {len(new)/1024:.0f} KB")
